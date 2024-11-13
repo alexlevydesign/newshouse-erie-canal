@@ -10,6 +10,10 @@
             height: 100vh;
             font-family: Barlow, Arial, sans-serif;
         }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+        }
         .bar {
             fill: steelblue;
         }
@@ -21,6 +25,10 @@
         }
         .axis-label.x-axis {
             margin: 4rem;
+        }
+        svg text.axis-label {
+            /* text-align: center; */
+            /* width: 100px; */
         }
         .chart-container {
             display: flex;
@@ -48,6 +56,8 @@
     </style>
 </head>
 <body>
+
+    <!-- <iframe src="https://alexlevydesign.github.io/newshouse-erie-canal/" frameborder="0"></iframe> -->
     <div class="chart-container">
         <svg id="chart"></svg>
     </div>

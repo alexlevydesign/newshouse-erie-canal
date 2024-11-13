@@ -40,7 +40,7 @@ function ReportWindowSize() {
                 const y = d3.scaleLinear()
                     // .domain([0, d3.max(data, d => d["Percent Population Change"])])
                     .domain([0, 1400])
-                    // .nice()
+                    .nice()
                     .range([height, 0]);
 
                 // Draw X axis
@@ -50,9 +50,11 @@ function ReportWindowSize() {
                     .selectAll("text")
                     .attr("class", "axis-label x-axis")
                     // .attr("transform", "rotate(-45)")
-                    // .style("text-anchor", "end");
+                    .style("text-anchor", "start");
                     d3.selectAll(".tick text") // selects the text within all groups of ticks
-                    .attr("y", "16"); // moves the text to the left by 20
+                    .attr("y", "16") // moves the text to the left by 20
+                    
+                    
 
                 // Draw Y axis
                 svg.append("g")
@@ -60,6 +62,7 @@ function ReportWindowSize() {
                     .attr("class", "axis-label y-axis");
                     d3.selectAll(".tick text") // selects the text within all groups of ticks
                     .attr("x", "-16"); // moves the text to the left by 20
+                    
 
                 // Draw bars
                 svg.selectAll(".bar")
